@@ -1,0 +1,73 @@
+Tools:
+
+Git
+Maven
+Nexus
+Sonarqube
+Jenkins
+Selenium
+Puppet
+
+
+
+
+
+
+
+
+
+#  Install Gitlab
+
+sudo apt-get update
+sudo apt-get install -y curl openssh-server ca-certificates
+sudo apt-get install -y postfix
+curl -sS https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash
+sudo EXTERNAL_URL="http://gitlab.example.com" apt-get install gitlab-ce
+gilab-ctl reconfigure
+/etc/gitlab/gitlab.rb
+
+
+#  Install JDK8 version.
+ 
+     sudo add-apt-repository ppa:webupd8team/java -y && \
+     sudo apt-get update && \
+     sudo apt-get install oracle-java8-installer && \
+     sudo apt-get install oracle-java8-set-default
+     #java -version
+
+
+# Install maven:
+  sudo apt-get purge maven maven2 maven3 && \
+   sudo apt-add-repository ppa:andrei-pozolotin/maven3 && \
+   sudo apt-get update && \
+   sudo apt-get install maven
+   mvn -f pom.xml clean install
+
+
+# Nexus Install:
+
+Login as ubuntu user and download
+wget https://sonatype-download.global.ssl.fastly.net/repository/repositoryManager/oss/nexus-2.14.8-01-bundle.tar.gz
+ tar -xvf nexus-2.14.8-01-bundle.tar.gz
+Goto > nexus> bin
+sudo RUN_AS_USER=root ./nexus start
+http://34.238.234.30:8081/nexus/
+Login Default : admin
+Pwd: admin123
+
+
+# Sonarqube Install:
+
+
+
+
+
+
+
+
+
+
+
+
+
+

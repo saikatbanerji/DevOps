@@ -1,55 +1,33 @@
-<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0                                                           http://maven.apache.org/xsd/settings-1.0.0.xsd">
+<settings>
 
-    <mirrors>
-        <mirror>
-        <!--This sends everything else to /public -->
-            <id>nexus</id>
-            <mirrorOf>*</mirrorOf>
-            <url>http://localhost:8081/nexus/content/groups/public</url>
-        </mirror>
-    </mirrors>
-
-    <activeProfiles>
-        <!--make the profile active all the time -->
-        <activeProfile>nexus</activeProfile>
-    </activeProfiles>
-
-    <profiles>
-        <profile>
-            <id>nexus</id>
-          <repositories>
-          <repository>
-          <id>central</id>
-          <url>http://maven.apache.org</url>
-          <releases><enabled>true</enabled></releases>
-          <snapshots><enabled>true</enabled></snapshots>
-          </repository>
-            </repositories>
-
-            <pluginRepositories>
-                <pluginRepository>
-                    <id>central</id>
-                    <url>http://maven.apache.org</url>
-                    <releases><enabled>true</enabled></releases>
-                    <snapshots><enabled>true</enabled></snapshots>
-                </pluginRepository>
-            </pluginRepositories>
-        </profile>
-    </profiles>
-
-    <servers>
-      <server>
-       <id>releases</id>
-       <username>deployment</username>
-       <password>deployment123</password>
-      </server>
-      <server>
-        <id>snapshots</id>
-        <username>deployment</username>
-        <password>deployment123</password>
-      </server>
-    </servers>
-
-</settings> 
+<servers>
+    <server>
+      <id>spring-snapshots</id>
+      <username>spring-user</username>
+      <password>my_password</password>
+    </server>
+    <server>
+      <id>spring-releases</id>
+      <username>spring-user</username>
+      <password>my_password</password>
+    </server>
+  </servers>
+  
+<profiles>
+    <profile>
+	<id>sonar</id>
+	<properties>
+          <sonar.jdbc.url>jdbc:mysql://localhost:3306/sonar</sonar.jdbc.url>
+          <sonar.jdbc.driver>com.mysql.jdbc.Driver</sonar.jdbc.driver>
+          <sonar.jdbc.username>sonar</sonar.jdbc.username>
+          <sonar.jdbc.password>xxxxx</sonar.jdbc.password>
+          <!-- SERVER ON A REMOTE HOST -->
+          <sonar.host.url>http://localhost:9000</sonar.host.url>		
+	</properties>
+    </profile>
+  </profiles>
+  <activeProfiles>
+    <activeProfile>sonar</activeProfile>
+  </activeProfiles>
+  
+  </settings>

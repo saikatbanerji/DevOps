@@ -42,6 +42,11 @@ gilab-ctl reconfigure
    sudo apt-get update && \
    sudo apt-get install maven
    mvn -f pom.xml clean install
+   
+   .me file :
+   
+   cd 
+   ls -lrta
 
 
 # Nexus Install:
@@ -57,6 +62,52 @@ Pwd: admin123
 
 
 # Sonarqube Install:
+
+1. download and configure sonarqube:
+wget https://sonarsource.bintray.com/Distribution/sonarqube/sonarqube-5.6.6.zip
+2. extract the sonarqube
+unzip sonarqube-5.6.6.zip
+3. # cd sonarqube/bin
+/.sonar.sh start
+4. http://Hostname:9000/
+5. mvn -f pom.xml clean install sonar:sonar
+
+username:admin
+password:admin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+2. install mysql:
+http://sharadchhetri.com/2014/05/07/install-mysql-server-5-6-ubuntu-14-04-lts-trusty-tahr/
+
+https://gist.github.com/rasheedamir/11460beef67bc6b58d61
+1. sudo apt-get update
+sudo apt-get install mysql-server-5.6
+2. Create SonarQube database and user.
+Command: mysql -u root -p < create_database.sql
+CREATE DATABASE sonar CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE USER ‘sonar’ IDENTIFIED BY ‘sonar';
+GRANT ALL ON sonar.* TO ‘sonar’@’%’ IDENTIFIED BY ‘sonar';
+GRANT ALL ON sonar.* TO ‘sonar’@’localhost’ IDENTIFIED BY ‘sonar';
+FLUSH PRIVILEGES;
+
 
 
 

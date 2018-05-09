@@ -56,7 +56,7 @@ wget https://sonatype-download.global.ssl.fastly.net/repository/repositoryManage
  tar -xvf nexus-2.14.8-01-bundle.tar.gz
 Goto > nexus> bin
 sudo RUN_AS_USER=root ./nexus start
-http://34.238.234.30:8081/nexus/
+http://xxx.238.234.30:8081/nexus/
 Login Default : admin
 Pwd: admin123
 
@@ -91,7 +91,7 @@ Initial Admin Passowrd Path :  /var/lib/jenkins/secrets
 
 nohup ./startup.sh &
 
-Webhook Trigger: https://github.com/saikatbanerji/springexample/settings/hooks/28764962
+Webhook Trigger: name:api@https://github.com/saikatbanerji/springexample/settings/hooks/28764962
 
 SONARQUBE: http://updates.jenkins-ci.org/download/plugins/sonar/
 Nexus: https://support.sonatype.com/hc/en-us/articles/227256688-How-do-I-configure-the-Nexus-Jenkins-Plugin

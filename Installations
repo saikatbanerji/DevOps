@@ -91,6 +91,7 @@ Initial Admin Passowrd Path :  /var/lib/jenkins/secrets
 
 nohup ./startup.sh &
 
+Webhook Trigger: https://github.com/saikatbanerji/springexample/settings/hooks/28764962
 
 SONARQUBE: http://updates.jenkins-ci.org/download/plugins/sonar/
 Nexus: https://support.sonatype.com/hc/en-us/articles/227256688-How-do-I-configure-the-Nexus-Jenkins-Plugin

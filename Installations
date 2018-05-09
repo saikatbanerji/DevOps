@@ -92,6 +92,10 @@ Initial Admin Passowrd Path :  /var/lib/jenkins/secrets
 SONARQUBE: http://updates.jenkins-ci.org/download/plugins/sonar/
 Nexus: https://support.sonatype.com/hc/en-us/articles/227256688-How-do-I-configure-the-Nexus-Jenkins-Plugin
 
+Dynamically Display Goit Branches; https://gist.github.com/eeichinger/9761870
+Extended choice Parameter Plugin: https://updates.jenkins.io/download/plugins/extended-choice-parameter/
+
+
 # Selenium Install:
 
 

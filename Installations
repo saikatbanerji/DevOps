@@ -95,6 +95,18 @@ Nexus: https://support.sonatype.com/hc/en-us/articles/227256688-How-do-I-configu
 Dynamically Display Goit Branches; https://gist.github.com/eeichinger/9761870
 Extended choice Parameter Plugin: https://updates.jenkins.io/download/plugins/extended-choice-parameter/
 
+Groovy Script:
+
+def gettags = ("git ls-remote -t -h ssh://git@github.com:saikatbanerji/springexample.git feature/*").execute()
+
+return gettags.text.readLines()
+         .collect { it.split()[1].replaceAll('refs/heads/', '')  }
+         .unique()
+         .findAll { it.startsWith('<some more pattern>') }
+
+Or, 
+
+List subversion tags plugin
 
 # Selenium Install:
 

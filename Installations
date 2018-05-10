@@ -134,28 +134,32 @@ debrepo:
 
 https://apt.puppetlabs.com/puppetlabs-release-pc1-trusty.deb
 
-dpkg -i puppetlabs-release-pc1-trusty.deb
-
-apt-get update
-
-apt-get install puppet-agent puppetserver -y
-
-sudo apt-get install puppet-common -y
-
 Follow the following steps: https://www.digitalocean.com/community/tutorials/how-to-install-puppet-4-in-a-master-agent-setup-on-ubuntu-14-04
 puppet resource service puppetserver ensure=running
 
-puppet resource service puppetserver enable=true
+wget https://apt.puppetlabs.com/puppetlabs-release-pc1-trusty.deb
+sudo dpkg -i puppetlabs-release-pc1-trusty.deb
+sudo apt-get update
+sudo apt-get -y install puppetserver
+sudo vi /etc/default/puppetserver
+JAVA_ARGS="-Xms3g -Xmx3g"
+sudo service puppetserver restart
+
+sudo service puppetserver status
+sudo /opt/puppetlabs/bin/puppet resource service puppetserver ensure=running enable=true
+
+DONOT : apt-get install puppet -common
+
 
 
 ## agent :
 
-apt-get install puppet-agent
 
-puppet resource service puppet ensure=running
-
-puppet resource service puppet enable=true
-
+wget https://apt.puppetlabs.com/puppetlabs-release-pc1-trusty.deb
+sudo dpkg -i puppetlabs-release-pc1-trusty.deb
+sudo apt-get update
+sudo apt-get install puppet-agent
+sudo /opt/puppetlabs/bin/puppet resource service puppet ensure=running enable=true
 
 
 

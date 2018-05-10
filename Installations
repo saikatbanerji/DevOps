@@ -148,7 +148,8 @@ sudo service puppetserver restart
 sudo service puppetserver status
 sudo /opt/puppetlabs/bin/puppet resource service puppetserver ensure=running enable=true
 
-DONOT : apt-get install puppet -common
+sudo apt-get install puppet 
+RESTART
 
 
 
@@ -160,6 +161,8 @@ sudo dpkg -i puppetlabs-release-pc1-trusty.deb
 sudo apt-get update
 sudo apt-get install puppet-agent
 sudo /opt/puppetlabs/bin/puppet resource service puppet ensure=running enable=true
+sudo apt-get install puppet 
+RESTART
 
 
 

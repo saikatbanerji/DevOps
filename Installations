@@ -138,19 +138,23 @@ dpkg -i puppetlabs-release-pc1-trusty.deb
 
 apt-get update
 
-apt-get install puppet-agent puppetserver
+apt-get install puppet-agent puppetserver -y
 
-puppet resource service pupperserver ensure=running
+sudo apt-get install puppet-common -y
 
-puppet resource service pupperserver enable=true
+Follow the following steps: https://www.digitalocean.com/community/tutorials/how-to-install-puppet-4-in-a-master-agent-setup-on-ubuntu-14-04
+puppet resource service puppetserver ensure=running
 
-agent :
+puppet resource service puppetserver enable=true
+
+
+## agent :
 
 apt-get install puppet-agent
 
 puppet resource service puppet ensure=running
 
-puppet resource service pupper enable=true
+puppet resource service puppet enable=true
 
 
 

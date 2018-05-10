@@ -164,6 +164,9 @@ sudo /opt/puppetlabs/bin/puppet resource service puppet ensure=running enable=tr
 sudo apt-get install puppet 
 RESTART
 
+goto /etc/puppetlabs/puppet/puppet.conf
+[agent]
+server=abc.example.com
 
 
 

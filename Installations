@@ -175,6 +175,10 @@ goto /etc/puppetlabs/puppet/puppet.conf
 server=abc.example.com (hostname -f in the master is the server name)
 
 sudo /opt/puppetlabs/bin/puppet agent -t
+sudo /opt/puppetlabs/bin/puppet cert list  --all
+
+
+
 
 
 

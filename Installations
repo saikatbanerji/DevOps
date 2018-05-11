@@ -159,6 +159,15 @@ notify {"Hi":}
 }
 
 
+sudo /opt/puppetlabs/bin/puppet module generate edu-example
+ sudo apt-get install tree
+ tree example --- init.pp
+
+facter
+
+puppet resources list: https://puppet.com/docs/puppet/5.5/type.html
+puppet cookbook : https://www.puppetcookbook.com/
+
 
 ## Puppet- agent :
 

@@ -197,6 +197,8 @@ facter
 
 https://theforeman.org/manuals/1.17/quickstart_guide.html#QuickstartGuide
 
+
+ntp is a prerequisite for multizone agents
 apt-get -y install ca-certificates
 wget https://apt.puppetlabs.com/puppet5-release-xenial.deb
 dpkg -i puppet5-release-xenial.deb

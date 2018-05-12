@@ -213,6 +213,11 @@ ping $(hostname -f)
 
 foreman-installer
 
+cd /etc/puppetlabs/puppet
+vi autosign.conf (*)
+restart with command>> foreman or service apache2 restart or init 6 (restart all services)
+
+
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::

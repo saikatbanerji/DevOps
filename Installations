@@ -6,7 +6,8 @@ Nexus
 Sonarqube
 Jenkins
 Selenium
-Puppet
+
+
 
 
 
@@ -190,7 +191,9 @@ sudo /opt/puppetlabs/bin/puppet agent -t
 sudo /opt/puppetlabs/bin/puppet cert list  --all
 
 
+## Foreman
 
+https://theforeman.org/manuals/1.17/quickstart_guide.html#QuickstartGuide
 
 
 

@@ -169,7 +169,7 @@ facter
 
 puppet resources list: https://puppet.com/docs/puppet/5.5/type.html
 puppet cookbook : https://www.puppetcookbook.com/
-
+ufw  allow 8140
 
 ## Puppet- agent :
 

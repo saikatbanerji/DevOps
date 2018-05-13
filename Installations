@@ -171,6 +171,18 @@ puppet resources list: https://puppet.com/docs/puppet/5.5/type.html
 puppet cookbook : https://www.puppetcookbook.com/
 ufw  allow 8140
 
+
+*** Inside Modules create manifests and jdk8 etc..
+
+
+
+
+
+
+
+
+
+
 ## Puppet- agent :
 
 Enter server IPs in /etc/hosts file (Puppet Master, Puppet Client)

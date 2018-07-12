@@ -154,6 +154,8 @@ sudo service puppetserver restart
 sudo service puppetserver status
 sudo /opt/puppetlabs/bin/puppet resource service puppetserver ensure=running enable=true
 sudo su
+ufw  allow 8140
+
 exit  (for puppet command)
 sudo vi /etc/puppetlabs/code/environments/production/manifests/site.pp
 
@@ -194,6 +196,7 @@ sudo dpkg -i puppetlabs-release-pc1-trusty.deb
 sudo apt-get update
 sudo apt-get install puppet-agent
 sudo /opt/puppetlabs/bin/puppet resource service puppet ensure=running enable=true
+ufw  allow 8140
 
 goto /etc/puppetlabs/puppet/puppet.conf
 [agent]
